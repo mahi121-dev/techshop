@@ -1,0 +1,21 @@
+body {
+    background-color: #a1a1df;
+    font-family: Arial, sans-serif;
+    color: #1b253e;
+    .product {border: 2px solid #1a1a2e;
+        padding: 16px;
+        border-radius: 8px;
+        }
+        .products {display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .product img {width: 100%;
+            border-radius: 4px;
+        }
+        nav {display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu a {margin-left: 20px;
+        }
