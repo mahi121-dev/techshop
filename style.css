@@ -43,3 +43,11 @@ body {
     top: 70px;
  display: none;
 }
+.remove-btn {
+background-color: #710319;
+color: #f5e2c3;
+border: none;
+padding: 4px 10px;
+border-radius: 20px;
+cursor: pointer;
+}
