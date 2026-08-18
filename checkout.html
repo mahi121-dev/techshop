@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Checkout - My Tech Shop</title><link rel="stylesheet" href="style.css"></head>
+<body><nav><div class="logo">TechShop</div><div class="menu"><a href="index.html">Home</a></div></nav>
+    <h1>Checkout</h1><div id="checkout-items"></div>
+    <h2>Shipping Details</h2><form id="checkout-form">
+        <input type="text" id="customer-name" placeholder="Full Name" required><br><br>
+        <input type="text" id="customer-address" placeholder="Delivery Address" required><br><br>
+        <input type="tel" id="customer-phone" placeholder="Phone Number" required><br><br>
+        <button type="submit" class="add-to-cart">Place Order</button>
+        </form><script type="module">import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";const firebaseConfig = { apiKey: "AIzaSyCcBuijIM8i39p4qoHiKgcuw1K7W68V9s8", authDomain: "techshop-5b395.firebaseapp.com", projectId: "techshop-5b395", storageBucket: "techshop-5b395.firebasestorage.app", messagingSenderId: "1087546826232", appId: "1:1087546826232:web:bb9b30213bea265e0dca0d" };const app = initializeApp(firebaseConfig);const db = getFirestore(app);window.db = db;window.collection = collection;window.addDoc = addDoc;</script><script type="module" defer src="checkout.js"></script></body>   
+</html>

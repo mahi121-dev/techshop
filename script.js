@@ -35,6 +35,7 @@ function attachButtonListeners() {
             cartTotal = cartTotal + priceNumber;
             cartCountDisplay.textContent = cartCount;
             cartItems.push({ name: productName, price: priceNumber });
+            localStorage.setItem("techshopCart", JSON.stringify(cartItems));
             updateCartPanel();
         });
     });
@@ -61,6 +62,7 @@ cartPanel.addEventListener("click", function(event) {
         const indexToRemove = event.target.getAttribute("data-index");
         cartTotal = cartTotal - cartItems[indexToRemove].price;
         cartItems.splice(indexToRemove, 1);
+        localStorage.setItem("techshopCart", JSON.stringify(cartItems));
         cartCount = cartCount - 1;
         cartCountDisplay.textContent = cartCount;
         updateCartPanel();
