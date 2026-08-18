@@ -47,6 +47,7 @@ function updateCartPanel() {
         cartPanel.innerHTML = cartPanel.innerHTML + "<p>" + item.name + " - ৳" + item.price + " <button class='remove-btn' data-index='" + index + "'>Remove</button></p>";
     });
     cartPanel.innerHTML = cartPanel.innerHTML + "<p><strong>Total: ৳" + cartTotal + "</strong></p>";
+    cartPanel.innerHTML = cartPanel.innerHTML + "<a href='checkout.html'><button class='add-to-cart'>Go to Checkout</button></a>";
 }
 
 cartToggle.addEventListener("click", function() {
