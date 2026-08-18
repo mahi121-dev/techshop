@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Admin - Orders</title><link rel="stylesheet" href="style.css"></head>
+    <body><nav><div class="logo">TechShop Admin</div><div class="menu"><a href="index.html">Store</a></div></nav>
+        <h1>All Orders</h1><div id="orders-list"></div>
+        <script type="module">import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";const firebaseConfig = { apiKey: "AIzaSyCcBuijIM8i39p4qoHiKgcuw1K7W68V9s8", authDomain: "techshop-5b395.firebaseapp.com", projectId: "techshop-5b395", storageBucket: "techshop-5b395.firebasestorage.app", messagingSenderId: "1087546826232", appId: "1:1087546826232:web:bb9b30213bea265e0dca0d" };const app = initializeApp(firebaseConfig);const db = getFirestore(app);window.db = db;window.collection = collection;window.getDocs = getDocs;</script><script type="module" defer src="admin.js"></script></body>
+</html>
