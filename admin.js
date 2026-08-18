@@ -1,3 +1,9 @@
+const adminPassword = prompt("Enter admin password:");
+if (adminPassword === "osmanporokiyakore") {
+    loadOrders();
+    } else {
+        document.body.innerHTML = "<h1>Access Denied</h1>";
+        }
 async function loadOrders() {
     const ordersCollection = window.collection(window.db, "orders");
     const snapshot = await window.getDocs(ordersCollection);
@@ -15,4 +21,3 @@ async function loadOrders() {
             ordersListDiv.appendChild(orderCard);
             });
 }
-loadOrders();
