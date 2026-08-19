@@ -90,6 +90,17 @@ cursor: pointer;
         gap: 8px;
     }
 }
-.logo, h1, p {
+h1, p {
     font-family: 'Montserrat', sans-serif;
+}
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    height: 40px;
+    width: auto;
 }
