@@ -17,9 +17,8 @@ body {
             border-radius: 4px;
         }
         nav {display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    align-items: center;
+}
         .menu a {
     margin-left: 20px;
     background-color: #ebf185;
@@ -92,8 +91,12 @@ cursor: pointer;
 }
 h1, p {
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 .logo {
+    margin-left: 412px;
+    justify-content: center;
+    flex: 1;
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     display: flex;
@@ -103,4 +106,17 @@ h1, p {
 .logo img {
     height: 40px;
     width: auto;
+}
+.top-logo {
+    text-align: center;
+    padding: 15px 0;
+}
+.top-logo img {
+    height: 60px;
+    width: auto;
+}
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
