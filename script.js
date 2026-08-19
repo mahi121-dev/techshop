@@ -18,6 +18,7 @@ async function loadProductsFromFirestore() {
         const product = doc.data();
         const card = document.createElement("div");
         card.className = "product";
+        card.setAttribute("data-category", product.category);
         card.innerHTML = "<img src='https://placehold.co/400x300?text=" + product.name + "'><h3>" + product.name + "</h3><p class='price'>৳" + product.price + "</p><button class='add-to-cart' data-name='" + product.name + "' data-price='" + product.price + "'>Add to Cart</button>";
         productsContainer.appendChild(card);
     });
@@ -71,3 +72,30 @@ cartPanel.addEventListener("click", function(event) {
 });
 
 loadProductsFromFirestore();
+const filterButtons = document.querySelectorAll(".filter-btn");
+filterButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        const selectedCategory = button.getAttribute("data-category");
+        const allCards = document.querySelectorAll(".product");
+        allCards.forEach(function(card) {
+            if (selectedCategory === "all" || card.getAttribute("data-category") === selectedCategory) {
+                card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                    }
+});
+});
+});
+const searchBar = document.getElementById("search-bar");
+searchBar.addEventListener("input", function() {
+    const searchText = searchBar.value.toLowerCase();
+    const allCards = document.querySelectorAll(".product");
+    allCards.forEach(function(card) {
+        const productName = card.querySelector("h3").textContent.toLowerCase();
+        if (productName.includes(searchText)) {
+            card.style.display = "block";
+            } else {
+                card.style.display = "none";
+                }
+});
+});
