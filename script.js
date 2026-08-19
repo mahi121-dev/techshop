@@ -19,7 +19,7 @@ async function loadProductsFromFirestore() {
         const card = document.createElement("div");
         card.className = "product";
         card.setAttribute("data-category", product.category);
-        card.innerHTML = "<img src='https://placehold.co/400x300?text=" + product.name + "'><h3>" + product.name + "</h3><p class='price'>৳" + product.price + "</p><button class='add-to-cart' data-name='" + product.name + "' data-price='" + product.price + "'>Add to Cart</button>";
+        card.innerHTML = "<img src='" + product.imageUrl + "'><h3>" + product.name + "</h3><p class='price'>৳" + product.price + "</p><button class='add-to-cart' data-name='" + product.name + "' data-price='" + product.price + "'>Add to Cart</button>";
         productsContainer.appendChild(card);
     });
     attachButtonListeners();

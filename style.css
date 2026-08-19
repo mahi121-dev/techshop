@@ -1,9 +1,9 @@
 body {
-    background-color: #a1a1df;
+   background-color: #0d0d0d;
     font-family: Arial, sans-serif;
-    color: #1b253e;
+    color: #f0e6d2;
     }
-    .product {border: 2px solid #1a1a2e;
+    .product {border: 2px solid #d4af37;
         padding: 16px;
         border-radius: 8px;
         }
@@ -12,30 +12,40 @@ body {
             gap: 20px;
         }
         .product img {width: 100%;
+            height: 250px;
+            object-fit: cover;
             border-radius: 4px;
         }
         nav {display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .menu a {margin-left: 20px;
-        }
-        .add-to-cart {background-color: #22223f;
-            color: white;
+        .menu a {
+    margin-left: 20px;
+    background-color: #ebf185;
+    color: #710319;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+        .add-to-cart {background-color: #d4af37;
+            color: #0d0d0d;
             border: none;
             padding: 10px 20px;
             border-radius: 6px;
             cursor: pointer;
         }
-        .cart {background-color: #22223f;
-            color: white;
+        .cart {background-color: #d4af37;
+            color: #0d0d0d;
             padding: 8px 14px;
             border-radius: 20px;
         }
         
  .cart-panel {       
-    background-color: white;
-    border: 2px solid #22223f;
+    background-color: #1a1a1a;
+    color: #f0e6d2;
+    border: 2px solid #d4af37;
     border-radius: 8px;
     padding: 16px;
     position: absolute;
